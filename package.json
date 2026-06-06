@@ -2,7 +2,7 @@
 	"private": true,
 	"name": "steamdb-browser-extension",
 	"version": "0.0.0",
-	"license": "MIT",
+	"license": "BSD-3-Clause",
 	"scripts": {
 		"start:chrome": "web-ext run --target chromium --source-dir ./",
 		"start:firefox": "web-ext run --firefox --source-dir ./",
@@ -15,16 +15,17 @@
 		"fix": "eslint . --fix && stylelint \"**/*.css\" --fix && prettier \"**/*.css\" --write"
 	},
 	"devDependencies": {
+		"@stylistic/eslint-plugin": "^5.10.0",
 		"@types/chrome": "^0.1.1",
 		"@types/firefox-webext-browser": "^143.0.0",
-		"archiver": "^7.0.1",
-		"eslint": "^9.10.0",
-		"eslint-plugin-jsdoc": "^61.0.0",
+		"eslint": "^10.4.0",
+		"eslint-plugin-jsdoc": "^62.3.0",
 		"prettier": "^3.3.2",
-		"stylelint": "^16.5.0",
-		"stylelint-config-standard": "^39.0.0",
-		"typescript": "^5.7.3",
-		"web-ext": "^9.0.0"
+		"stylelint": "^17.11.1",
+		"stylelint-config-standard": "^40.0.0",
+		"typescript": "^6.0.2",
+		"web-ext": "^10.0.0",
+		"yazl": "^3.3.1"
 	},
 	"repository": {
 		"type": "git",

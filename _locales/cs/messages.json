@@ -32,7 +32,7 @@
 		"message": "Zobrazit na PCGamingWiki"
 	},
 	"view_your_achievements": {
-		"message": "Osobní úspěchy"
+		"message": "Osobní achievementy"
 	},
 	"store_page": {
 		"message": "Obchod",
@@ -292,6 +292,44 @@
 			"price": {
 				"content": "%price%",
 				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_multiple": {
+		"message": "Prodat více předmětů"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ na prodej s cenou od $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ žádostí o nákup za $price$ nebo méně",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ nebo více",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
 			}
 		}
 	},
@@ -580,6 +618,15 @@
 		"message": "Skrýt v záhlaví tlačítko „Instalovat Steam“",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Přidat tlačítko \"$open_desktop_app$\" v záhlaví",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Skrýt banner „Otevřít ve Steamu“"
 	},
@@ -600,7 +647,7 @@
 		"message": "Modernizovaný vzhled"
 	},
 	"options_achievement_groups": {
-		"message": "Seskupit achievementy pomocí dat ze Steam Hunters",
+		"message": "Seskupit achievementy s daty ze Steam Hunters",
 		"description": "Steam Hunters is the name of https://steamhunters.com/ please do not translate it"
 	},
 	"options_spoiler_achievements": {
@@ -611,14 +658,6 @@
 	},
 	"options_prevent_store_images_description": {
 		"message": "Někteří vývojáři vkládají do popisu produktu megabajty obrázků, které se mohou dlouho načítat; obrázek se načte po kliknutí na ikonu"
-	},
-	"options_enhancement_award_popup_url": {
-		"message": "Podporovat parametry $award$ v profilu a odkazech na sdílené soubory",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
 	},
 	"options_builtin_collapse_library": {
 		"message": "Přidat tlačítko pro sbalení bloku „máte již ve své knihovně“"
@@ -642,7 +681,10 @@
 		"message": "Zobrazit ikonu zámku pro uzamčené achievementy"
 	},
 	"options_builtin_achievements_csrating": {
-		"message": "Zobrazit historii CS hodnocení na stránce CS2 achivementů"
+		"message": "Zobrazit historii CS hodnocení na stránce CS2 achievementů"
+	},
+	"open_desktop_app": {
+		"message": "Otevřít v počítačové aplikaci"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Do $available_date$ nebudete moci vytvořit další balíček Booster Pack pro tuto hru.",

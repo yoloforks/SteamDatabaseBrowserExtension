@@ -24,6 +24,10 @@
 		{
 			msg = _t( token, [ _t( 'options_achievement_groups' ) ] );
 		}
+		else if( token === 'options_enhancement_open_desktop_app_button' )
+		{
+			msg = _t( token, [ _t( 'open_desktop_app' ) ] );
+		}
 		else
 		{
 			msg = _t( token );
@@ -53,8 +57,7 @@
 	const checkboxes = document.querySelectorAll( '.option-check:not(:disabled)' );
 
 	/** @type {Record<string, HTMLInputElement[]>} */
-	const options =
-	{
+	const options = {
 		'clicked-star': null,
 	};
 
@@ -93,7 +96,7 @@
 
 	GetOption( Object.keys( options ), ( items ) =>
 	{
-		for( const item in items )
+		for( const [ item, value ] of Object.entries( items ) )
 		{
 			if( item === 'clicked-star' )
 			{
@@ -104,7 +107,7 @@
 
 			for( const element of options[ item ] )
 			{
-				element.checked = items[ item ];
+				element.checked = value;
 			}
 		}
 	} );
@@ -141,7 +144,7 @@
 
 		try
 		{
-			ExtensionApi.permissions.request( permissions ).catch( ex =>
+			ExtensionApi.permissions.request( permissions ).catch( ( ex ) =>
 			{
 				alert( `Failed to request permissions: ${ex.message}` );
 			} );
@@ -159,7 +162,7 @@
 
 	function HideButtonIfAllPermissionsGranted()
 	{
-		ExtensionApi.permissions.contains( permissions, ( result ) =>
+		ExtensionApi.permissions.contains( permissions ).then( ( result ) =>
 		{
 			document.getElementById( 'permissions' ).hidden = result;
 			document.getElementById( 'star' ).hidden = starDismissed || !result;

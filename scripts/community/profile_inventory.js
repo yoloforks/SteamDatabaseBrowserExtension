@@ -27,6 +27,7 @@ if( document.getElementById( 'inventory_link_753' ) )
 		element.type = 'text/javascript';
 		element.src = GetLocalResource( 'scripts/community/inventory.js' );
 		element.dataset.homepage = GetHomepage();
+		element.dataset.language = GetLanguage();
 		element.dataset.logo = GetLocalResource( 'icons/white.svg' );
 		element.dataset.optionsUrl = GetLocalResource( 'options/options.html' ) + '#inventory';
 		element.dataset.options = JSON.stringify( items );
@@ -39,6 +40,10 @@ if( document.getElementById( 'inventory_link_753' ) )
 			inventory_sell_at: _t( 'inventory_sell_at' ),
 			inventory_list_at_title: _t( 'inventory_list_at_title' ),
 			inventory_sell_at_title: _t( 'inventory_sell_at_title' ),
+			inventory_sell_multiple: _t( 'inventory_sell_multiple' ),
+			inventory_orders_for_sale: _t( 'inventory_orders_for_sale' ),
+			inventory_orders_to_buy: _t( 'inventory_orders_to_buy' ),
+			inventory_orders_or_more: _t( 'inventory_orders_or_more' ),
 			inventory_badge_level: _t( 'inventory_badge_level' ),
 			inventory_badge_foil_level: _t( 'inventory_badge_foil_level' ),
 			inventory_badge_none: _t( 'inventory_badge_none' ),

@@ -44,7 +44,7 @@ else
 			/** @type {HTMLAnchorElement} */
 			const button = document.querySelector( '.game_area_already_owned_btn:first-of-type a' );
 
-			if( button && button.pathname === "/about/" )
+			if( button && button.pathname === '/about/' )
 			{
 				button.setAttribute( 'hidden', 'true' );
 				button.style.display = 'none';
@@ -281,7 +281,14 @@ else
 
 			for( const bundleElement of container )
 			{
-				InsertPurchaseBlockId( bundleElement.closest( '.game_area_purchase_game' ).querySelector( '.game_purchase_action' ), 'bundle', Number.parseInt( bundleElement.value, 10 ) );
+				const purchaseGame = bundleElement.closest( '.game_area_purchase_game' );
+
+				if( !purchaseGame )
+				{
+					continue;
+				}
+
+				InsertPurchaseBlockId( purchaseGame.querySelector( '.game_purchase_action' ), 'bundle', Number.parseInt( bundleElement.value, 10 ) );
 			}
 
 			// We have to inject our JS directly into the page to hook Steam's functionality
@@ -440,11 +447,87 @@ function DrawLowestPrice()
 	/** @type {string | null} */
 	let currency = currencyElement ? currencyElement.content : null;
 
+	if( window.location.hostname === 'store.steamchina.com' )
+	{
+		currency = 'CNY-XC';
+	}
+
 	if( !currency )
 	{
-		currency = 'USD';
+		const ECurrencyCode = [
+			null,
+			'USD',
+			'GBP',
+			'EUR',
+			'CHF',
+			'RUB',
+			'PLN',
+			'BRL',
+			'JPY',
+			'NOK',
+			'IDR',
+			'MYR',
+			'PHP',
+			'SGD',
+			'THB',
+			'VND',
+			'KRW',
+			'TRY',
+			'UAH',
+			'MXN',
+			'CAD',
+			'AUD',
+			'NZD',
+			'CNY',
+			'INR',
+			'CLP',
+			'PEN',
+			'COP',
+			'ZAR',
+			'HKD',
+			'TWD',
+			'SAR',
+			'AED',
+			'SEK',
+			'ARS',
+			'ILS',
+			'BYN',
+			'KZT',
+			'KWD',
+			'QAR',
+			'CRC',
+			'UYU',
+			'BGN',
+			'HRK',
+			'CZK',
+			'DKK',
+			'HUF',
+			'RON',
+		];
 
-		WriteLog( 'Missing priceCurrency, forced to USD' );
+		const applicationConfigElement = document.getElementById( 'application_config' );
+
+		// If the page has no priceCurrency defined, try to determine user currency from the account cart
+		// This happens if the game cannot be bought (removed from store, coming soon, demos) or can only be bought via bundles
+		if( applicationConfigElement?.dataset?.store_user_config )
+		{
+			const storeUserConfig = JSON.parse( applicationConfigElement.dataset.store_user_config );
+			const currencyCode = storeUserConfig?.accountcart?.cart?.subtotal?.currency_code || // logged in
+				storeUserConfig?.shoppingcart?.lineitems?.[ 0 ]?.package_item?.costwhenadded?.currencycode; // logged out, has item in cart
+			currency = ECurrencyCode[ currencyCode ] || null;
+
+			if( currency )
+			{
+				WriteLog( `Found currency code ${currencyCode} in store_user_config` );
+			}
+		}
+
+		// If we still don't have a currency, do not request the price
+		if( !currency )
+		{
+			WriteLog( 'Failed to determine currency, no priceCurrency and no store_user_config' );
+			return;
+		}
 	}
 
 	if( currency === 'USD' )
@@ -525,10 +608,6 @@ function DrawLowestPrice()
 				break;
 		}
 	}
-	else if( currency === 'CNY' && window.location.hostname === 'store.steamchina.com' )
-	{
-		currency = 'CNY-XC';
-	}
 
 	WriteLog( `Currency is "${currency}"` );
 
@@ -596,7 +675,7 @@ function DrawLowestPrice()
 			.replaceAll( '&', '&amp;' )
 			.replaceAll( '<', '&lt;' )
 			.replaceAll( '"', '&quot;' )
-			.replaceAll( "'", '&apos;' );
+			.replaceAll( '\'', '&apos;' );
 
 		const safePrice = escapeHtml( response.data.p );
 
@@ -640,7 +719,7 @@ async function FetchSteamApiCurrentPlayers()
 	if( !applicationConfigElement )
 	{
 		WriteLog( 'Failed to get application_config' );
-		return;
+		return -1;
 	}
 
 	const applicationConfig = JSON.parse( applicationConfigElement.dataset.config );
@@ -649,7 +728,7 @@ async function FetchSteamApiCurrentPlayers()
 	if( !webApiBaseUrl )
 	{
 		WriteLog( 'Failed to get WEBAPI_BASE_URL' );
-		return;
+		return -1;
 	}
 
 	const params = new URLSearchParams();
@@ -674,7 +753,7 @@ async function FetchSteamApiCurrentPlayers()
 
 	if( data && data.response && data.response.player_count > 0 )
 	{
-		return data.response.player_count;
+		return Number.parseInt( data.response.player_count, 10 );
 	}
 
 	return 0;
@@ -1029,7 +1108,6 @@ function FormatRelativeDate( date )
 
 	return [ daysSinceLastUpdate, relativeDateFormatter.format( -daysSinceLastUpdate, 'day' ) ];
 }
-
 
 /**
  * @param {Element} element

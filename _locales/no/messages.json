@@ -274,7 +274,7 @@
 		"message": "CS-rangering"
 	},
 	"inventory_quick_sell_tip": {
-		"message": "Hold musen over en pris for å selge",
+		"message": "Hold musepekeren over en pris for å selge",
 		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {
@@ -292,6 +292,44 @@
 			"price": {
 				"content": "%price%",
 				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_multiple": {
+		"message": "Selg flere gjenstander"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ til salgs, fra $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ forespørsler om å kjøpe for $price$ eller lavere",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ eller mer",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
 			}
 		}
 	},
@@ -580,6 +618,15 @@
 		"message": "Skjul \"Installer Steam\"-knappen i toppteksten",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Legg til en \"$open_desktop_app$\"-knapp i toppteksten",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Skjul \"Åpne i Steam\"-banneren"
 	},
@@ -612,14 +659,6 @@
 	"options_prevent_store_images_description": {
 		"message": "Noen utviklere legger megabyte med bilder i produktbeskrivelser som kan ta en stund å laste, klikk på et bilde for å laste inn"
 	},
-	"options_enhancement_award_popup_url": {
-		"message": "Støtt $award$-parametere på profil og delte fil-lenker",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
-	},
 	"options_builtin_collapse_library": {
 		"message": "Legg til en knapp for å skjule \"allerede i biblioteket\"-blokken"
 	},
@@ -643,6 +682,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Vis CS-rangeringshistorikk på CS2-prestasjonssiden"
+	},
+	"open_desktop_app": {
+		"message": "Åpne i skrivebordsappen"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Du vil ikke kunne lage enda en booster-pakke for dette spille før $available_date$.",

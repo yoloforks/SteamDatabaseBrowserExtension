@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Pārdot vairākus priekšmetus"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ pārdošanā, sākot no $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ pirkšanas pieprasījumi par $price$ vai mazāk",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ vai vairāk",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Tavs žetona līmeni: $level$",
 		"placeholders": {
@@ -580,6 +618,15 @@
 		"message": "Paslēpt \"Install Steam\" pogu galvenē",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Pievienot pogu “$open_desktop_app$” galvenē",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Paslēpt \"Atvert vietnē Steam\" ziņu"
 	},
@@ -612,14 +659,6 @@
 	"options_prevent_store_images_description": {
 		"message": "Spēļu aprakstos dažreiz ir ievietoti vairāku megabaitu lieli attēli, kas var lēni ielādēties, uzklikšķiniet uz attēlu, lai to ielādētu"
 	},
-	"options_enhancement_award_popup_url": {
-		"message": "Atbalstīt $award$ parametrus uz profila un padalītu failu saitēm",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
-	},
 	"options_builtin_collapse_library": {
 		"message": "Pievienot pogu, lai samazinātu “jau atrodas Jūsu bibliotēkā” bloku"
 	},
@@ -643,6 +682,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Parādīt CS reitinga vēsturi uz CS2 sasniegumu lapas"
+	},
+	"open_desktop_app": {
+		"message": "Atvērt Datora Lietotnē"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Jūs nevarēsiet izveidot vēl vienu Booster Pack šai spēlei līdz $available_date$.",

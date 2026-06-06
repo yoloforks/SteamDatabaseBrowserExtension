@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Vendi più oggetti"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ in vendita a partire da $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ ordini a $price$ o meno",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ o più",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Il livello del tuo badge: $level$",
 		"placeholders": {
@@ -580,6 +618,15 @@
 		"message": "Nascondi il pulsante \"Installa Steam\" nell'intestazione",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Aggiungi un pulsante \"$open_desktop_app$\" nell'intestazione",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Nascondi il banner \"Apri in Steam\""
 	},
@@ -612,14 +659,6 @@
 	"options_prevent_store_images_description": {
 		"message": "Alcuni sviluppatori inseriscono immagini di grandi dimensioni nella descrizione dei prodotti che possono richiedere del tempo per caricarle, clicca su un'immagine per caricarla"
 	},
-	"options_enhancement_award_popup_url": {
-		"message": "Supporta i parametri $award$ sul profilo e sui collegamenti di file condivisi",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
-	},
 	"options_builtin_collapse_library": {
 		"message": "Aggiungi un pulsante per comprimere il blocco \"già nella tua libreria\""
 	},
@@ -643,6 +682,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Visualizza la cronologia del punteggio CS sulla pagina degli obiettivi di CS2"
+	},
+	"open_desktop_app": {
+		"message": "Apri nell'app Desktop"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Non sarai in grado di creare un altro Booster Pack per questo gioco fino ad $available_date$.",

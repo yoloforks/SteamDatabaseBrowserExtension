@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Parduoti daugybę daiktų"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ parduodama nuo $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ pirkimo užklausų už $price$ ar mažiau",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ ar daugiau",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Tavo ženklelio lygis: $level$",
 		"placeholders": {
@@ -580,6 +618,15 @@
 		"message": "Paslėpti \"Įdiegti Steam\" mygtuką antraštėje",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Pridėti \"$open_desktop_app$\" mygtuką antraštėje",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Paslėpti \"Atidaryti per Steam\" užrašą"
 	},
@@ -612,14 +659,6 @@
 	"options_prevent_store_images_description": {
 		"message": "Kai kurie žaidimų kūrėjai deda megabaitinius paveikslėlius į produktų aprašymus, kurių įkėlimas gali užtrukti, spustelėkite ant paveikslėlio, kad jis būtų įkeltas"
 	},
-	"options_enhancement_award_popup_url": {
-		"message": "Palaikyti $award$ parametrus profilio ir bendrųjų failų nuorodose",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
-	},
 	"options_builtin_collapse_library": {
 		"message": "Uždėti mygtuką kad griūtų \"jau tavo bibliotekoje\" blokas"
 	},
@@ -643,6 +682,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Rodyti CS reitingo istoriją CS2 pasiekimų puslapyje"
+	},
+	"open_desktop_app": {
+		"message": "Atidaryti programėlėje"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Negalėsite sukurti kito Booster Pack šiam žaidimui iki $available_date$.",

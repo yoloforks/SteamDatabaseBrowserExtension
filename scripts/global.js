@@ -2,9 +2,9 @@
 
 // There's no easier way to check if we're on error page :(
 if( document.title === 'Sorry!' ||
-document.title === 'Error' ||
-document.title === '502 Bad Gateway' ||
-document.title === 'We Broke It' )
+	document.title === 'Error' ||
+	document.title === '502 Bad Gateway' ||
+	document.title === 'We Broke It' )
 {
 	const link = document.createElement( 'a' );
 	link.href = 'https://steamstat.us';
@@ -21,7 +21,11 @@ document.title === 'We Broke It' )
 }
 else
 {
-	GetOption( { 'enhancement-hide-install-button': true, 'enhancement-no-linkfilter': false }, ( items ) =>
+	GetOption( {
+		'enhancement-hide-install-button': true,
+		'enhancement-open-desktop-app-button': false,
+		'enhancement-no-linkfilter': false
+	}, ( items ) =>
 	{
 		if( items[ 'enhancement-hide-install-button' ] )
 		{
@@ -32,6 +36,20 @@ else
 			{
 				button.setAttribute( 'hidden', 'true' );
 				button.style.display = 'none';
+			}
+		}
+
+		if( items[ 'enhancement-open-desktop-app-button' ] )
+		{
+			const installSteamBtn = document.querySelector( '.header_installsteam_btn' );
+
+			if( installSteamBtn )
+			{
+				const button = document.createElement( 'a' );
+				button.className = 'steamdb_open_desktop_app';
+				button.href = 'steam://openurl/' + window.location;
+				button.textContent = _t( 'open_desktop_app' );
+				installSteamBtn.insertAdjacentElement( 'afterend', button );
 			}
 		}
 

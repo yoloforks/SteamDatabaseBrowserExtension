@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Sælg flere genstande"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ til salg fra $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ anmodninger om at købe til $price$ eller mindre",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ eller mere",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Dit badge niveau: $level$",
 		"placeholders": {
@@ -580,6 +618,15 @@
 		"message": "Skjul knappen \"Installer Steam\" i headeren",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Tilføj en \"$open_desktop_app$\"-knap i headeren",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Skjul \"Åbn i Steam\" banneret"
 	},
@@ -612,14 +659,6 @@
 	"options_prevent_store_images_description": {
 		"message": "Nogle udviklere allokere megabytes af billeder i produkt beskrivelser, som kan tage et stykke tid til at indlæse, klik på et billede for at indlæse"
 	},
-	"options_enhancement_award_popup_url": {
-		"message": "Støt $award$ parametre på profil og delte fil-links",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
-	},
 	"options_builtin_collapse_library": {
 		"message": "Tilføj en knap for at skjule \"allerede i dit bibliotek\"-blokken"
 	},
@@ -643,6 +682,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Vis CS-vurderingshistorik på CS2 bedriftssiden"
+	},
+	"open_desktop_app": {
+		"message": "Åbn i skrivebordsappen"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Du vil ikke være i stand til at oprette en anden Booster Pack for dette spil, før $available_date$.",

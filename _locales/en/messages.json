@@ -305,6 +305,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Sell multiple items"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ for sale starting at $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ requests to buy at $price$ or lower",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ or more",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Your badge level: $level$",
 		"placeholders": {
@@ -598,6 +636,15 @@
 		"message": "Hide \"Install Steam\" button in header",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Add a \"$open_desktop_app$\" button in header",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Hide \"Open in Steam\" banner"
 	},
@@ -630,14 +677,6 @@
 	"options_prevent_store_images_description": {
 		"message": "Some developers put megabytes of images in product descriptions which can take a while to load, click on an image to load"
 	},
-	"options_enhancement_award_popup_url": {
-		"message": "Support $award$ parameters on profile and shared file links",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
-	},
 	"options_builtin_collapse_library": {
 		"message": "Add a button to collapse the \"already in your library\" block"
 	},
@@ -664,6 +703,9 @@
 	},
 	"options_profile_gamecovers": {
 		"message": "Display game covers with country restriction"
+	},
+	"open_desktop_app": {
+		"message": "Open in Desktop App"
 	},
 	"boostercreator_available_at_date": {
 		"message": "You will not be able to create another Booster Pack for this game until $available_date$.",

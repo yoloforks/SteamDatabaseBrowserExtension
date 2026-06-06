@@ -1,7 +1,7 @@
 {
 	"$schema": "https://www.schemastore.org/webextension.json",
 	"manifest_version": 3,
-	"version": "4.32",
+	"version": "4.34",
 	"author": "SteamDB",
 	"name": "SteamDB",
 	"short_name": "SteamDB",
@@ -521,17 +521,6 @@
 			]
 		},
 		{
-			"matches":
-			[
-				"https://steamcommunity.com/sharedfiles/filedetails*",
-				"https://steamcommunity.com/workshop/filedetails*"
-			],
-			"js":
-			[
-				"scripts/community/filedetails.js"
-			]
-		},
-		{
 			"all_frames": true,
 			"matches":
 			[
@@ -553,22 +542,6 @@
 			"js":
 			[
 				"scripts/community/multibuy_injected.js"
-			]
-		},
-		{
-			"run_at": "document_start",
-			"world": "MAIN",
-			"matches":
-			[
-				"https://steamcommunity.com/market/*"
-			],
-			"js":
-			[
-				"scripts/community/market_injected.js"
-			],
-			"css":
-			[
-				"styles/market.css"
 			]
 		},
 		{

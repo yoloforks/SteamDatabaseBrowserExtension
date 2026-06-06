@@ -274,7 +274,7 @@
 		"message": "Hệ số CS"
 	},
 	"inventory_quick_sell_tip": {
-		"message": "Di chuột qua giá để bán",
+		"message": "Nhấn một giá để đặt lệnh bán",
 		"description": "This is shown before \"List at %price%\", keep it short"
 	},
 	"inventory_list_at": {
@@ -292,6 +292,44 @@
 			"price": {
 				"content": "%price%",
 				"example": "1,99€"
+			}
+		}
+	},
+	"inventory_sell_multiple": {
+		"message": "Bán nhiều món"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ đang chào bán với giá từ $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ lệnh mua với giá từ $price$ trở xuống",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ trở lên",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
 			}
 		}
 	},
@@ -580,6 +618,15 @@
 		"message": "Ẩn nút \"Cài đặt Steam\" ở đầu trang",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Thêm nút \"$open_desktop_app$\" ở đầu trang",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Ẩn biểu ngữ \"Mở trong phần mềm Steam\""
 	},
@@ -612,14 +659,6 @@
 	"options_prevent_store_images_description": {
 		"message": "Một số nhà phát triển đưa hàng megabyte hình ảnh vào mô tả sản phẩm khiến trang sản phẩm mất một lúc để tải, hãy nhấp vào hình ảnh nếu vẫn cần tải"
 	},
-	"options_enhancement_award_popup_url": {
-		"message": "Hỗ trợ thông số $award$ trên trang cá nhân và trang nội dung được chia sẻ",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
-	},
 	"options_builtin_collapse_library": {
 		"message": "Thêm nút thu gọn biểu ngữ \"đã ở trong thư viện\""
 	},
@@ -643,6 +682,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Đính kèm lịch sử hệ số CS trên trang thành tựu Steam của CS2"
+	},
+	"open_desktop_app": {
+		"message": "Mở trong ứng dụng"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Bạn hiện chưa thể tạo thêm gói bổ sung cho trò chơi này, vui lòng thử lại sau thời điểm $available_date$.",

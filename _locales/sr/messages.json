@@ -295,6 +295,44 @@
 			}
 		}
 	},
+	"inventory_sell_multiple": {
+		"message": "Продај више предмета"
+	},
+	"inventory_orders_for_sale": {
+		"message": "$count$ на продају почевши од $price$",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "1,085"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,37€"
+			}
+		}
+	},
+	"inventory_orders_to_buy": {
+		"message": "$count$ захтева за куповину по цени $price$ или мање",
+		"placeholders": {
+			"count": {
+				"content": "%count%",
+				"example": "97,164"
+			},
+			"price": {
+				"content": "%price%",
+				"example": "0,35€"
+			}
+		}
+	},
+	"inventory_orders_or_more": {
+		"message": "$price$ или више",
+		"placeholders": {
+			"price": {
+				"content": "%price%",
+				"example": "0,42€"
+			}
+		}
+	},
 	"inventory_badge_level": {
 		"message": "Ваш ниво беџева: $level$",
 		"placeholders": {
@@ -580,6 +618,15 @@
 		"message": "Сакриј ”Install Steam” дугме у заглављу",
 		"description": "\"Install Steam\" should match what the button on Steam itself in the header says: https://store.steampowered.com/"
 	},
+	"options_enhancement_open_desktop_app_button": {
+		"message": "Додај дугме „$open_desktop_app$” у заглавље",
+		"placeholders": {
+			"open_desktop_app": {
+				"content": "$1",
+				"description": "Uses translation for open_desktop_app"
+			}
+		}
+	},
 	"options_enhancement_hide_mobile_app_button": {
 		"message": "Сакриј ”Open in the Steam” банер"
 	},
@@ -612,14 +659,6 @@
 	"options_prevent_store_images_description": {
 		"message": "Неки програмери ставе слике од неколико мегабајта у описе производа који могу да потрају да се учитају, кликните на слику да бисте је учитали"
 	},
-	"options_enhancement_award_popup_url": {
-		"message": "Подржи $award$ параметре на профилима и линковима дељених фајлова",
-		"placeholders": {
-			"award": {
-				"content": "<code>award</code>"
-			}
-		}
-	},
 	"options_builtin_collapse_library": {
 		"message": "Додајте дугме да бисте скупили блок „већ у вашој библиотеци“"
 	},
@@ -643,6 +682,9 @@
 	},
 	"options_builtin_achievements_csrating": {
 		"message": "Прикажи историју CS рејтинга на страници CS2 достигнућа"
+	},
+	"open_desktop_app": {
+		"message": "Отвори у десктоп апликацији"
 	},
 	"boostercreator_available_at_date": {
 		"message": "Нећете моћи да направите још један Booster Pack за ову игру до $available_date$.",
