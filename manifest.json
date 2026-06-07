@@ -74,7 +74,6 @@
 
 				"scripts/community/inventory.js",
 				"scripts/community/agecheck_injected.js",
-				"scripts/community/filedetails_award_injected.js",
 				"scripts/community/profile_gamecovers_injected.js",
 				"scripts/community/tradeoffer_injected.js",
 				"scripts/community/boostercreator_injected.js",
